@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Opps - ett fel inträffade";
+}
+
+<div class="container text-center myErrorContainer font-weight-bold">
+    <img src="/Img/GisysLogga.jpg" class="mb-4" alt="Gisys logga" />
+    <h1 class="header mt">Opps! Något gick fel..</h1>
+    <p class="mt-4">Updatera browsern eller clicka på knappen nedan för att gå tillbaka.</p>
+    <div class="col text-center p-2">
+        <button type="button" onclick="location.href='@Url.Action("index")'" class="myBtn">Tillbaka</button>
+    </div>
+</div>
+

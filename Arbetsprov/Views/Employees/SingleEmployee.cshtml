@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Arbetsprov.Models.EmployeeViewModel>
+
+@{
+    ViewData["Title"] = "Enskild Anställd";
+}
+
+<div class="text-center">
+    <h1 class"">Enskild Anställd</h1>
+    <img src="/Img/GisysLogga.jpg" alt="Gisys Logga" />
+</div>
+<br />
+<div class="col text-center p-2">
+    <button type="button" onclick="location.href='@Url.Action("index")'" class="myBtn">Tillbaka</button>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee_salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee_age)
+            </th>
+            <th class="hidden">
+                @Html.DisplayNameFor(model => model.Profile_image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee_salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee_age)
+                </td>
+                <td class="hidden">
+                    @Html.DisplayFor(modelItem => item.Profile_image)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

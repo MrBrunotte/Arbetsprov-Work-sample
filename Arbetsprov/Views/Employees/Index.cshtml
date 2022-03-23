@@ -1,0 +1,39 @@
+﻿@model Arbetsprov.Models.Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2>Välkommen till Gisys</h2>
+    <h3>- Get Employee info -</h3>
+    <img src="~/Img/GisysLogga.jpg" class="m-3" alt="Gisys logga" />
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col mt-4">
+            <div class="col text-center">
+                <h3>Alla anställda</h3>
+            </div>
+            <div class="col text-center p-2">
+                <button type="button" onclick="location.href='@Url.Action("AllEmployees")'" class="myBtn">Visa alla</button>
+            </div>
+        </div>
+        <div class="col mt-4">
+            <div class="col text-center"><h3>Sök anställd</h3></div>
+            <div class="col">
+                <form class="myForm text-center" method="post" action="Employees/SingleEmployee">
+                    <div class="col text-center p-2">
+                        <label for="id" class="myForm__label"></label>
+                        <input type="text" id="id" name="id" class="myForm__input p-2 text-center" placeholder="Ange anställnings ID" autocomplete="off" />
+                        @*<button type="button" onclick="location.href='@Url.Action("SingleEmployee", new {id = 1})'" class="myBtn">Visa alla</button>*@
+                        <button type="submit" class="myBtn">Visa</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
